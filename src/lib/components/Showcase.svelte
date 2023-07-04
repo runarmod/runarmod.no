@@ -19,6 +19,5 @@
         margin: 0 auto;
         width: 100%;
         max-width: 1200px;
-        margin-top: 70vh;
     }
 </style>

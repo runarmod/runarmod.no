@@ -1,7 +1,6 @@
 <script>
     let scrollY;
     let indexes = [0, 1, 2, 3, 4, 5];
-    $: console.log(scrollY);
 </script>
 
 <svelte:window bind:scrollY />
@@ -35,14 +34,5 @@
         top: 0;
         left: 0;
         pointer-events: none;
-    }
-
-    .container img:last-child::after {
-        content: "";
-        position: absolute;
-        border: 1px solid red;
-        width: 100%;
-        height: 100%;
-        background-color: #01051e;
     }
 </style>

@@ -46,7 +46,9 @@
     .container {
         max-width: 60vw;
         margin: 0 auto;
-        margin-top: 10vh;
+        --clearing-top: 10vh;
+        margin-top: var(--clearing-top);
+        height: calc(100vh - var(--clearing-top));
     }
 
     .container .links {
