@@ -1,4 +1,18 @@
+:root {
+    --scroll-bar-width: 10px;
+
+    --accent: #e7233a;
+    --secondary: #eceaea;
+    --primary: #f17e8c;
+    --background: #01051e;
+    --text: #faf6ef;
+}
+
 body {
     background-color: #01051e;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: var(--scroll-bar-width);
 }
