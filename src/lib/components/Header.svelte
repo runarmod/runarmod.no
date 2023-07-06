@@ -19,7 +19,7 @@
 
 <div class="container">
     <h1>Runar Saur Modahl</h1>
-    <h3>M.Sc. Computer Science at NTNU</h3>
+    <h2>M.Sc. Computer Science at NTNU</h2>
     <div class="links">
         {#each links as info}
             <LogoLink {...info} />
@@ -29,7 +29,7 @@
 
 <style>
     h1,
-    h3 {
+    h2 {
         text-align: center;
     }
 
@@ -38,7 +38,7 @@
         color: #c62368;
     }
 
-    h3 {
+    h2 {
         font-size: 1.5em;
         color: #eceaea;
     }
