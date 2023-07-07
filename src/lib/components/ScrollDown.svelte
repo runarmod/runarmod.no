@@ -29,9 +29,9 @@
 
 <div class="container" style="transform: translateY({-10 * $anim}px)">
     {#if scrollY <= windowHeight / 2}
-        <h4>{text}</h4>
+        <p><b>{text}</b></p>
     {:else}
-        <h4>My project showcase</h4>
+        <p><b>My project showcase</b></p>
     {/if}
     <img src="/images/arrowdown.svg" alt="arrow down" />
 </div>
@@ -40,7 +40,8 @@
     .container {
         position: absolute;
         bottom: 2.5vh;
-        width: calc(100vw - var(--scroll-bar-width));
+        width: calc(100vw - 2 * var(--scroll-bar-width));
+        left: var(--scroll-bar-width);
 
         display: flex;
         flex-direction: column;
@@ -50,9 +51,10 @@
 
     img {
         width: 50px;
+        height: 50px;
     }
 
-    h4 {
+    p {
         color: var(--primary);
         font-size: 1.5rem;
         margin: 0;
