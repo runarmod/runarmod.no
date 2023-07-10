@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #01051e;
+    background-color: var(--background);
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
