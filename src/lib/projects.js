@@ -1,6 +1,6 @@
 export const projects = [
     {
-        name: "Advent of Code Setup Project",
+        name: "Advent of Code",
         link: "https://github.com/runarmod/adventofcode",
         img: "aoc.png",
         description:
