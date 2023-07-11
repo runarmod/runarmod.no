@@ -44,7 +44,7 @@
     }
 
     .container {
-        max-width: 60vw;
+        max-width: 1200px;
         margin: 0 auto;
         --clearing-top: 10vh;
         margin-top: var(--clearing-top);
