@@ -1,6 +1,6 @@
 <script>
     import ShowcaseElement from "$lib/components/ShowcaseElement.svelte";
-    import { projects } from "$lib/projects.js";
+    import { projects } from "$lib/consts.js";
 </script>
 
 <div class="background">
@@ -20,6 +20,7 @@
         top: 100vh;
         left: 0;
         background-color: var(--background);
+        transition: background-color 0.5s;
     }
     .container {
         display: flex;
