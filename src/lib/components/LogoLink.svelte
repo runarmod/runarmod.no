@@ -1,12 +1,13 @@
 <script>
-    import { secondary } from "$lib/consts.js";
+    import { theme } from "$lib/stores.js";
+
     export let url;
     export let image;
     export let name;
 </script>
 
 <a href={url}>
-    <img src={image} alt={name} background-color={secondary} />
+    <img src={image} alt={name} class="{$theme} svgicon" />
 </a>
 
 <style>

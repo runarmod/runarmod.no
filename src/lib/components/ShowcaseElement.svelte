@@ -50,6 +50,7 @@
         width: 100%;
         height: 100%;
         overflow: auto;
+        transition: color 0.5s, background-color 0.5s;
     }
 
     h2,

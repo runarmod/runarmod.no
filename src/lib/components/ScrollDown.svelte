@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
-    import { tweened } from "svelte/motion";
     import { quadInOut } from "svelte/easing";
+    import { tweened } from "svelte/motion";
 
     export let text = "Scroll down";
 

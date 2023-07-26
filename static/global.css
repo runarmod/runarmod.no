@@ -1,6 +1,4 @@
-:root {
-    --scroll-bar-width: 10px;
-
+:root.dark {
     --accent: #e7233a;
     --secondary: #eceaea;
     --primary: #f17e8c;
@@ -9,9 +7,48 @@
     --text: #faf6ef;
 }
 
+:root {
+    --scroll-bar-width: 10px;
+
+    --accent: #e61931;
+    --secondary: #e7e4e4;
+    --primary: #f17e8c;
+    --background: #fafafa;
+    --background-shade: #ececec;
+    --text: #050505;
+}
+
 body {
     background-color: var(--background);
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.5s;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    transition: color 0.5s, background-color 0.5s;
+}
+
+/*  
+    First set the svg to black
+    Then use https://isotropic.co/tool/hex-color-to-css-filter/
+    to find how to convert
+*/
+.svgicon.dark {
+    filter: brightness(0%) invert(95%) sepia(11%) saturate(308%) hue-rotate(320deg) brightness(104%)
+        contrast(96%);
+}
+
+.svgicon.light {
+    filter: brightness(0%) invert(0%) sepia(19%) saturate(213%) hue-rotate(336deg) brightness(91%)
+        contrast(96%);
+}
+
+.svgicon {
+    transition: filter 0.5s;
 }
 
 ::-webkit-scrollbar {

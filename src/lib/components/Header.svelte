@@ -1,22 +1,10 @@
 <script>
     import LogoLink from "$lib/components/LogoLink.svelte";
-    import github from "$lib/images/github.svg";
-    import linkedin from "$lib/images/linkedin.svg";
-
-    const links = [
-        {
-            name: "Github",
-            url: "https://github.com/runarmod",
-            image: github,
-        },
-        {
-            name: "LinkedIn",
-            url: "https://www.linkedin.com/in/runar-saur-modahl-068827202",
-            image: linkedin,
-        },
-    ];
+    import { links } from "$lib/consts.js";
+    import ThemeSwitch from "$lib/components/ThemeSwitch.svelte";
 </script>
 
+<ThemeSwitch />
 <div class="container">
     <h1>Runar Saur Modahl</h1>
     <h2>M.Sc. Computer Science at NTNU</h2>
@@ -35,12 +23,12 @@
 
     h1 {
         font-size: 3em;
-        color: #c62368;
+        color: var(--accent);
     }
 
     h2 {
         font-size: 1.5em;
-        color: #eceaea;
+        color: var(--text);
     }
 
     .container {
