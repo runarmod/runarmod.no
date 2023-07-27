@@ -26,6 +26,11 @@ export const links = [
         url: "https://www.linkedin.com/in/runar-saur-modahl-068827202",
         image: "/images/linkedin.svg",
     },
+    {
+        name: "Email",
+        url: "mailto:runarmod@gmail.com",
+        image: "/images/email.svg",
+    },
 ];
 
 export const themeicons = {

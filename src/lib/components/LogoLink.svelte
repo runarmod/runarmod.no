@@ -17,6 +17,6 @@
 
     img {
         width: 24px;
-        height: 24px;
+        aspect-ratio: 1/1;
     }
 </style>
