@@ -11,28 +11,23 @@
     let outerHeight = 1080;
     let scrollY;
 
-    let firstTime = true;
-    theme.subscribe(async (value) => {
-        if (firstTime) {
-            firstTime = false;
-            return;
-        }
-        if (value === "dark") {
-            paths.dark.shift();
-            paths.dark.push(await getDarkmodeImages());
-        } else {
-            paths.light.shift();
-            paths.light.push(await getLightmodeImages());
-        }
-    });
-
     const opacity = tweened(0, {
-        duration: 1500,
+        duration: 1000,
         easing: sineInOut,
     });
 
     onMount(() => {
         opacity.set(1);
+
+        theme.subscribe(async (value) => {
+            if (value === "dark") {
+                paths.dark.shift();
+                paths.dark.push(await getDarkmodeImages());
+            } else {
+                paths.light.shift();
+                paths.light.push(await getLightmodeImages());
+            }
+        });
     });
 </script>
 
@@ -41,12 +36,12 @@
 <div class="container">
     {#each paths[$theme][0] as path, i}
         {@const len = paths[$theme][0].length}
-        {@const new_y = (-scrollY * (i + 1)) / len}
+        {@const newY = (-scrollY * (i + 1)) / len}
         <svg
             xmlns="http://www.w3.org/2000/svg"
             width={outerWidth}
             height={outerHeight}
-            style="transform: translate(0, {new_y}px); opacity: {$opacity};"
+            style="transform: translate(0, {newY}px); opacity: {$opacity};"
         >
             <path fill={path.color} d={path.path} transform="scale({outerWidth}, {outerHeight})" />
         </svg>
