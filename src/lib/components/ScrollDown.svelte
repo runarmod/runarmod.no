@@ -31,7 +31,7 @@
     {#if scrollY <= windowHeight / 2}
         <p><b>{text}</b></p>
     {:else}
-        <p><b>My project showcase</b></p>
+        <p><b>Project portfolio</b></p>
     {/if}
     <img src="/images/arrowdown.svg" alt="arrow down" />
 </div>
@@ -60,5 +60,6 @@
         font-size: 1.5rem;
         margin: 0;
         padding: 0;
+        -webkit-text-stroke: 0.5px var(--text);
     }
 </style>

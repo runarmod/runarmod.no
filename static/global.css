@@ -10,11 +10,11 @@
 :root {
     --scroll-bar-width: 10px;
 
-    --accent: #e61931;
+    --accent: #e7233a;
     --secondary: #e7e4e4;
     --primary: #f17e8c;
     --background: #fafafa;
-    --background-shade: #ececec;
+    --background-shade: #f1f1f1;
     --text: #050505;
 }
 
