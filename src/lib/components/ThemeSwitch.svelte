@@ -7,17 +7,6 @@
     let src = themeicons[$theme].src;
     let alt = themeicons[$theme].alt;
 
-    // Have to reject the first subscribe event because it's
-    // triggered before on mount when the writable has the default
-    // value, but we want to get the theme from localStorage
-    let firstTime = true;
-    theme.subscribe((value) => {
-        if (!firstTime) {
-            setTheme(value);
-        }
-        firstTime = false;
-    });
-
     const setTheme = (value) => {
         src = themeicons[value].src;
         alt = themeicons[value].alt;
@@ -46,6 +35,10 @@
                 setTheme("dark");
             }
         }
+
+        theme.subscribe((value) => {
+            setTheme(value);
+        });
     });
 </script>
 
