@@ -1,10 +1,8 @@
 <script>
     import LogoLink from "$lib/components/LogoLink.svelte";
     import { links } from "$lib/consts.js";
-    import ThemeSwitch from "$lib/components/ThemeSwitch.svelte";
 </script>
 
-<ThemeSwitch />
 <div class="container">
     <h1>Runar Saur Modahl</h1>
     <h2>M.Sc. Computer Science at NTNU</h2>
