@@ -23,7 +23,7 @@ export const links = [
     },
     {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/runar-saur-modahl-068827202",
+        url: "https://www.linkedin.com/in/modahl",
         image: "/images/linkedin.svg",
     },
     {
