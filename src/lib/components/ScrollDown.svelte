@@ -40,7 +40,7 @@
     .container {
         position: absolute;
         bottom: 2.5vh;
-        width: calc(100vw - 2 * var(--scroll-bar-width));
+        width: calc(100% - 2 * var(--scroll-bar-width));
         left: var(--scroll-bar-width);
 
         display: flex;
