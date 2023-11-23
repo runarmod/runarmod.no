@@ -15,10 +15,24 @@
                 theme.set("dark");
             }
         }
-    })
+    });
+
+    function handleAnchorClick(event) {
+        const link = event.currentTarget;
+        const anchorId = new URL(link.href).hash.replace("#", "");
+        const anchor = document.getElementById(anchorId);
+        window.scrollTo({
+            behavior: "smooth",
+            top: anchor.offsetTop,
+        });
+    }
 </script>
 
 <Header />
 <Parallax {data} />
-<ScrollDown text="Scroll down for projects" />
-<Showcase />
+<a href="#showcase" on:click|preventDefault={handleAnchorClick}>
+    <ScrollDown text="Scroll down for projects" />
+</a>
+<div id="showcase">
+    <Showcase />
+</div>
