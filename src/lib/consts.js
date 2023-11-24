@@ -46,18 +46,25 @@ export const themeicons = {
 
 export const projects = [
     {
+        name: "Lonely Keys",
+        link: "https://github.com/runarmod/Lonely-Keys",
+        img: "lonelykeys.png",
+        description:
+            "A 2D platformer game made using Lua and Love2D framework as the final project for Harvard's CS50x course.",
+    },
+    {
+        name: "runarmod.no",
+        link: "https://github.com/runarmod/runarmod.no",
+        img: "runarmod.png",
+        description:
+            "This website is open source and the code is on GitHub. It is made using Svelte/Sveltekit and is hosted on Vercel.",
+    },
+    {
         name: "Advent of Code",
         link: "https://github.com/runarmod/adventofcode",
         img: "aoc.png",
         description:
             "This is a project I made to help me setup my Advent of Code challenges. Options include setup of folderstructure, waiting for release, download of input and autocreation of default script.",
-    },
-    {
-        name: "Lonely Keys",
-        link: "https://github.com/runarmod/Lonely-Keys",
-        img: "lonelykeys.png",
-        description:
-            "A 2D platformer game made using Lua and Love2D framework as the final project for Harvard's CS50 course.",
     },
     {
         name: "Chess",
