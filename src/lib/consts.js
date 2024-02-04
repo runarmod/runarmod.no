@@ -53,6 +53,13 @@ export const projects = [
             "A 2D platformer game made using Lua and Love2D framework as the final project for Harvard's CS50x course.",
     },
     {
+        name: "Karaktersnitt",
+        link: "https://github.com/runarmod/Karaktersnitt",
+        img: "karaktersnitt.png",
+        description:
+            "A Google Chrome and Firefox extension that calculates the average grade of a student's grades from Studentweb. It is possible to choose which grades to include and exclude.",
+    },
+    {
         name: "runarmod.no",
         link: "https://github.com/runarmod/runarmod.no",
         img: "runarmod.png",
