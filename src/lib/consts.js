@@ -12,7 +12,7 @@ export const light_background = "fafafa";
 export const light_background_shade = "ececec";
 export const light_text = "050505";
 
-export const API_URL = "https://wavy-runarmod.vercel.app/api/";
+export const API_URL = "https://wavy.runarmod.no/api/";
 // export const API_URL = "http://127.0.0.1:5000/api/"
 
 export const links = [
