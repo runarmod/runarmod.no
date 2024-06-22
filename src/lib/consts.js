@@ -57,7 +57,7 @@ export const projects = [
         link: "https://github.com/runarmod/Karaktersnitt",
         img: "karaktersnitt.png",
         description:
-            "A Google Chrome and Firefox extension that calculates the average grade of a student's grades from Studentweb. It is possible to choose which grades to include and exclude.",
+            "A Chrome/Firefox/Edge extension that calculates the average grade of a student's grades from Studentweb. It is possible to choose which grades to include and exclude.",
     },
     {
         name: "runarmod.no",
