@@ -1,11 +1,13 @@
 <script>
-    export let data;
+    import { preventDefault } from "svelte/legacy";
 
     import Header from "$lib/components/Header.svelte";
     import Parallax from "$lib/components/Parallax.svelte";
     import ScrollDown from "$lib/components/ScrollDown.svelte";
     import Showcase from "$lib/components/Showcase.svelte";
     import { onMount } from "svelte";
+    /** @type {{data: any}} */
+    let { data } = $props();
 
     onMount(() => {
         if (browser) {
@@ -30,7 +32,7 @@
 
 <Header />
 <Parallax {data} />
-<a href="#showcase" on:click|preventDefault={handleAnchorClick}>
+<a href="#showcase" onclick={preventDefault(handleAnchorClick)}>
     <ScrollDown text="Scroll down for projects" />
 </a>
 <div id="showcase">

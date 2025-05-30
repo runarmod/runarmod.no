@@ -1,8 +1,6 @@
 <script>
-    export let name;
-    export let link;
-    export let img;
-    export let description;
+    /** @type {{name: any, link: any, img: any, description: any}} */
+    let { name, link, img, description } = $props();
 
     let imageRef = `/images/projects/${img}`;
 </script>
@@ -50,7 +48,9 @@
         width: 100%;
         height: 100%;
         overflow: auto;
-        transition: color 0.5s, background-color 0.5s;
+        transition:
+            color 0.5s,
+            background-color 0.5s;
     }
 
     h2,
@@ -89,6 +89,8 @@
     a:focus {
         transform: scale(1.1);
         box-shadow: 0 0 11px var(--text);
-        transition: transform 0.5s ease, box-shadow 0.25s ease;
+        transition:
+            transform 0.5s ease,
+            box-shadow 0.25s ease;
     }
 </style>

@@ -1,9 +1,8 @@
 <script>
     import { theme } from "$lib/stores.js";
 
-    export let url;
-    export let image;
-    export let name;
+    /** @type {{url: any, image: any, name: any}} */
+    let { url, image, name } = $props();
 </script>
 
 <a href={url}>

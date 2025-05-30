@@ -5,11 +5,12 @@
     import { sineInOut } from "svelte/easing";
     import { tweened } from "svelte/motion";
 
-    export let data;
+    /** @type {{data: any}} */
+    let { data } = $props();
     let paths = data.paths;
-    let outerWidth = 1920;
-    let outerHeight = 1080;
-    let scrollY;
+    let outerWidth = $state(1920);
+    let outerHeight = $state(1080);
+    let scrollY = $state();
 
     const opacity = tweened(0, {
         duration: 1000,

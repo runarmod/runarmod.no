@@ -4,8 +4,8 @@
     import { theme } from "$lib/stores.js";
     import { onMount } from "svelte";
 
-    let src = themeicons[$theme].src;
-    let alt = themeicons[$theme].alt;
+    let src = $state(themeicons[$theme].src);
+    let alt = $state(themeicons[$theme].alt);
 
     const setTheme = (value) => {
         src = themeicons[value].src;
@@ -42,7 +42,7 @@
     });
 </script>
 
-<button on:click={toggle}><img {src} {alt} class="{$theme} svgicon" /></button>
+<button onclick={toggle}><img {src} {alt} class="{$theme} svgicon" /></button>
 
 <style>
     button {

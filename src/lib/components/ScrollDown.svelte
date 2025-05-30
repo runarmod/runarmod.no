@@ -3,11 +3,12 @@
     import { quadInOut } from "svelte/easing";
     import { tweened } from "svelte/motion";
 
-    export let text = "Scroll down";
+    /** @type {{text?: string}} */
+    let { text = "Scroll down" } = $props();
 
-    let scrollY = 0;
+    let scrollY = $state(0);
 
-    let windowHeight = 0;
+    let windowHeight = $state(0);
     onMount(() => {
         windowHeight = window.innerHeight;
     });
