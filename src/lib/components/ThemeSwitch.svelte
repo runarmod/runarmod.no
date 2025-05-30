@@ -1,7 +1,7 @@
 <script>
     import { browser } from "$app/environment";
     import { themeicons } from "$lib/consts.js";
-    import { theme } from "$lib/stores.js";
+    import { theme } from "../stores.js";
     import { onMount } from "svelte";
 
     let src = $state(themeicons[$theme].src);
@@ -35,10 +35,10 @@
                 setTheme("dark");
             }
         }
+    });
 
-        theme.subscribe((value) => {
-            setTheme(value);
-        });
+    $effect(() => {
+        setTheme($theme);
     });
 </script>
 

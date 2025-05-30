@@ -1,23 +1,10 @@
 <script>
-    import { preventDefault } from "svelte/legacy";
-
     import Header from "$lib/components/Header.svelte";
     import Parallax from "$lib/components/Parallax.svelte";
     import ScrollDown from "$lib/components/ScrollDown.svelte";
     import Showcase from "$lib/components/Showcase.svelte";
-    import { onMount } from "svelte";
     /** @type {{data: any}} */
     let { data } = $props();
-
-    onMount(() => {
-        if (browser) {
-            if (localStorage.getItem("theme") === "light") {
-                theme.set("light");
-            } else {
-                theme.set("dark");
-            }
-        }
-    });
 
     function handleAnchorClick(event) {
         const link = event.currentTarget;
@@ -27,6 +14,13 @@
             behavior: "smooth",
             top: anchor.offsetTop,
         });
+    }
+
+    function preventDefault(fn) {
+        return (event) => {
+            event.preventDefault();
+            fn(event);
+        };
     }
 </script>
 

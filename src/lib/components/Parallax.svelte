@@ -1,9 +1,9 @@
 <script>
-    import { theme } from "$lib/stores.js";
-    import { getDarkmodeImages, getLightmodeImages } from "$lib/wavy.js";
+    import { theme } from "../stores.js";
+    import { getDarkmodeImages, getLightmodeImages } from "../wavy.js";
     import { onMount } from "svelte";
     import { sineInOut } from "svelte/easing";
-    import { tweened } from "svelte/motion";
+    import { Tween } from "svelte/motion";
 
     /** @type {{data: any}} */
     let { data } = $props();
@@ -12,23 +12,23 @@
     let outerHeight = $state(1080);
     let scrollY = $state();
 
-    const opacity = tweened(0, {
+    const opacity = new Tween(0, {
         duration: 1000,
         easing: sineInOut,
     });
 
+    $effect(async () => {
+        if ($theme === "dark") {
+            paths.dark.shift();
+            paths.dark.push(await getDarkmodeImages());
+        } else {
+            paths.light.shift();
+            paths.light.push(await getLightmodeImages());
+        }
+    });
+
     onMount(() => {
         opacity.set(1);
-
-        theme.subscribe(async (value) => {
-            if (value === "dark") {
-                paths.dark.shift();
-                paths.dark.push(await getDarkmodeImages());
-            } else {
-                paths.light.shift();
-                paths.light.push(await getLightmodeImages());
-            }
-        });
     });
 </script>
 
@@ -42,7 +42,7 @@
             xmlns="http://www.w3.org/2000/svg"
             width={outerWidth}
             height={outerHeight}
-            style="transform: translate(0, {newY}px); opacity: {$opacity};"
+            style="transform: translate(0, {newY}px); opacity: {opacity.current};"
         >
             <path fill={path.color} d={path.path} transform="scale({outerWidth}, {outerHeight})" />
         </svg>

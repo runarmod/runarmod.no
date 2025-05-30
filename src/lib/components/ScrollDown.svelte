@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { quadInOut } from "svelte/easing";
-    import { tweened } from "svelte/motion";
+    import { Tween } from "svelte/motion";
 
     /** @type {{text?: string}} */
     let { text = "Scroll down" } = $props();
@@ -13,7 +13,7 @@
         windowHeight = window.innerHeight;
     });
 
-    const anim = tweened(0, {
+    const anim = new Tween(0, {
         duration: 1500,
         easing: quadInOut,
     });
@@ -28,7 +28,7 @@
 
 <svelte:window bind:scrollY />
 
-<div class="container" style="transform: translateY({-10 * $anim}px)">
+<div class="container" style="transform: translateY({-10 * anim.current}px)">
     {#if scrollY <= windowHeight / 2}
         <p><b>{text}</b></p>
     {:else}
