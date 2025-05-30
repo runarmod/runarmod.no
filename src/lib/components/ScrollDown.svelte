@@ -1,7 +1,5 @@
 <script>
     import { onMount } from "svelte";
-    import { quadInOut } from "svelte/easing";
-    import { Tween } from "svelte/motion";
 
     /** @type {{text?: string}} */
     let { text = "Scroll down" } = $props();
@@ -12,23 +10,11 @@
     onMount(() => {
         windowHeight = window.innerHeight;
     });
-
-    const anim = new Tween(0, {
-        duration: 1500,
-        easing: quadInOut,
-    });
-
-    let loop = () =>
-        anim
-            .set(1)
-            .then(() => anim.set(0))
-            .then(() => loop());
-    loop();
 </script>
 
 <svelte:window bind:scrollY />
 
-<div class="container" style="transform: translateY({-10 * anim.current}px)">
+<div class="container float">
     {#if scrollY <= windowHeight / 2}
         <p><b>{text}</b></p>
     {:else}
@@ -48,6 +34,19 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    .float {
+        animation: floatY 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatY {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-10px);
+        }
     }
 
     img {
