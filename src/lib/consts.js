@@ -48,35 +48,35 @@ export const projects = [
     {
         name: "Lonely Keys",
         link: "https://github.com/runarmod/Lonely-Keys",
-        img: "lonelykeys.png",
+        img: "lonelykeys.webp",
         description:
             "A 2D platformer game made using Lua and Love2D framework as the final project for Harvard's CS50x course.",
     },
     {
         name: "Karaktersnitt",
         link: "https://github.com/runarmod/Karaktersnitt",
-        img: "karaktersnitt.png",
+        img: "karaktersnitt.webp",
         description:
             "A Chrome/Firefox/Edge extension that calculates the average grade of a student's grades from Studentweb. It is possible to choose which grades to include and exclude.",
     },
     {
         name: "runarmod.no",
         link: "https://github.com/runarmod/runarmod.no",
-        img: "runarmod.png",
+        img: "runarmod.webp",
         description:
             "This website is open source and the code is on GitHub. It is made using Svelte/Sveltekit and is hosted on Vercel.",
     },
     {
         name: "Advent of Code",
         link: "https://github.com/runarmod/adventofcode",
-        img: "aoc.png",
+        img: "aoc.webp",
         description:
             "This is a project I made to help me setup my Advent of Code challenges. Options include setup of folderstructure, waiting for release, download of input and autocreation of default script.",
     },
     {
         name: "Chess",
         link: "https://github.com/runarmod/chess-java",
-        img: "chess.png",
+        img: "chess.webp",
         description:
             "A chess game made using Java and JavaFX. It includes normal chess, fischer random, position exporting and importing using FEN-notation.",
     },
