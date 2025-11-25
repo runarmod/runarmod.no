@@ -71,7 +71,7 @@ export const projects = [
         link: "https://github.com/runarmod/adventofcode",
         img: "aoc.webp",
         description:
-            "This is a project I made to help me setup my Advent of Code challenges. Options include setup of folderstructure, waiting for release, download of input and autocreation of default script.",
+            "My collection of solutions for every Advent of Code challenge. Includes a package that automatically downloads the input data and submits the answers. The solutions are made using Python.",
     },
     {
         name: "Everybody Codes",
