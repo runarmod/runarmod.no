@@ -74,6 +74,13 @@ export const projects = [
             "This is a project I made to help me setup my Advent of Code challenges. Options include setup of folderstructure, waiting for release, download of input and autocreation of default script.",
     },
     {
+        name: "Everybody Codes",
+        link: "https://github.com/runarmod/everybody-codes",
+        img: "everybody-codes.webp",
+        description:
+            "My collection of solutions for the coding exercises on the website Everybody Codes. The solutions are made using Python.",
+    },
+    {
         name: "Chess",
         link: "https://github.com/runarmod/chess-java",
         img: "chess.webp",
